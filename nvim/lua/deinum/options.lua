@@ -57,7 +57,8 @@ cnoremap %s/ %sm/
 
 vim.cmd [[
 au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-au BufRead,BufNewFile * setlocal textwidth=80
+au BufRead,BufNewFile * setlocal textwidth=100
+au BufRead,BufNewFile *.md set spell
 ]]
 
 
