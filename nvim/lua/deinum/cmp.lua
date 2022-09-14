@@ -45,7 +45,7 @@ cmp.setup({
   }),
 
   sources = cmp.config.sources({
-    { name = 'luasnip' }, -- For luasnip users.
+    { name = 'luasnip' }, 
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = "path" },
@@ -66,7 +66,7 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, opts)
+  vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
 
 end
 
@@ -79,13 +79,13 @@ cmp.setup.cmdline('/', {
 })
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.cmdline(),
-  sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-    { name = 'cmdline' }
-  })
-})
-
+-- cmp.setup.cmdline(':', {
+--   mapping = cmp.mapping.preset.cmdline(),
+--   sources = cmp.config.sources({
+--     { name = 'path' }
+--   }, {
+--     { name = 'cmdline' }
+--   })
+-- })
+--
 

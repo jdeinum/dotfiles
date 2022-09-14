@@ -1,14 +1,16 @@
 local vim = vim
 
--- Left and right can switch buffers
-vim.keymap.set("n", "<left>", ":bp<cr>")
-vim.keymap.set("n", "<right>", ":bp<cr>")
 
 -- Disable home row keys
 vim.keymap.set("", "<up>", "<nop>")
 vim.keymap.set("", "<down>", "<nop>")
 vim.keymap.set("", "<left>", "<nop>")
 vim.keymap.set("", "<right>", "<nop>")
+
+
+-- Left and right can switch buffers
+vim.keymap.set("n", "<left>", ":bp<cr>")
+vim.keymap.set("n", "<right>", ":bn<cr>")
 
 -- <leader><leader> switches between buffers
 vim.keymap.set("n", "<leader><leader>", "<c-^>")

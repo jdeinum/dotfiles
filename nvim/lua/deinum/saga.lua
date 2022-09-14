@@ -3,7 +3,17 @@
 local keymap = vim.keymap.set
 local saga = require("lspsaga")
 
-saga.init_lsp_saga()
+saga.init_lsp_saga({
+	code_action_lightbulb = {
+		enable = false,
+		enable_in_insert = false,
+		cache_code_action = true,
+		sign = true,
+		update_time = 150,
+		sign_priority = 20,
+		virtual_text = true,
+	},
+})
 
 -- run gitui with leader gg
 local term = require("lspsaga.floaterm")
@@ -15,12 +25,12 @@ vim.keymap.set("t", "q", "<C-\\><C-n><cmd>Lspsaga close_floaterm<CR>", { silent 
 -- keeping this commented out until there is support for passing in parameters
 -- vim.keymap.set("n", "<leader>ww", "<cmd>Lspsaga open_floaterm ddgr -n 5<CR>", { silent = true })
 
-
 -- Lsp finder find the symbol definition implmement reference
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 
 -- Definition preview
-keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+keymap("n", "gd", vim.lsp.buf.definition, { silent = true })
+keymap("n", "gD", vim.lsp.buf.references, { silent = true })
 
 -- Code action
 keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
@@ -54,11 +64,10 @@ end, { silent = true })
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
 -- Outline
--- keymap("n","<leader>p", "<cmd>LSoutlineToggle<CR>",{ silent = true })
+keymap("n", "<leader>op", "<cmd>LSoutlineToggle<CR>", { silent = true })
 
 -- Signature help
 keymap("n", "gs", "<Cmd>Lspsaga signature_help<CR>", { silent = true })
 
-
 -- global diagnostic
-keymap("n", "<leader>D", "<Cmd>Telescope diagnostics<CR>", {silent = true})
+keymap("n", "<leader>D", "<Cmd>Telescope diagnostics<CR>", { silent = true })

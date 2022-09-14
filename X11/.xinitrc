@@ -39,13 +39,13 @@ setxkbmap us &
 #
 # # Set up an icon tray
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
---expand true --width 10 --transparent true --tint 0x5f5f5f --height 24 &
+--expand true --width 10 --transparent true --tint 0x5f5f5f --height 25 &
 
 # # Set the default X cursor to the usual pointer
 xsetroot -cursor_name left_ptr
 
 # # Set a nice background
-feh --bg-fill --no-fehbg ~/Pictures/monad.png
+feh --bg-fill --no-fehbg ~/Pictures/xmonad.png
 
 # # Fire up screensaver
 xscreensaver -no-splash &
@@ -56,13 +56,6 @@ xscreensaver -no-splash &
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet &
 fi
-
-# for copying and pasting across host to VM
-if [-x /usr/bin/vmware-user ] ; then
-  vmware-user &
-fi
-
-vmware-user &
 
 
 exec xmonad

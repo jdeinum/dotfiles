@@ -146,12 +146,13 @@ alias -g ll='exa -l'
 alias -g lll='exa -la'
 alias -g cat='bat'
 alias -g dig='dog'
-alias -g diff='difftastic'
+alias -g diff='difftc'
 alias -g traceroute='mtr'
 alias -g locate='plocate'
 alias -g hexdump='hexyl'
 alias -g curl='xh'
 alias -g find='fd'
+alias -g top='htop'
 
 
 

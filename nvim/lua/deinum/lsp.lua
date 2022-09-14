@@ -41,6 +41,12 @@ lspconfig.setup = function()
 	}
 end
 
+
+  local bufopts = { noremap=true, silent=true}
+local on_attach = function(client, bufnr)
+  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+end
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.offsetEncoding = { "utf-16" }
 

@@ -21,7 +21,7 @@ bo.autoindent = true
 bo.smartindent = true
 o.undofile = true
 o.undodir = "/home/deinum/.vimdid"
-wo.colorcolumn = '100'
+wo.colorcolumn = '80'
 o.mouse = 'a'
 wo.number = true
 wo.relativenumber = true
@@ -57,8 +57,7 @@ cnoremap %s/ %sm/
 
 vim.cmd [[
 au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-au BufRead,BufNewFile * setlocal textwidth=100
-au BufRead,BufNewFile *.md set spell
+au BufRead,BufNewFile * setlocal textwidth=80
 ]]
 
 

@@ -133,6 +133,8 @@ packer.startup(function(use)
 
   use 'lervag/vimtex'
 
+  use {"ellisonleao/glow.nvim"}
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
