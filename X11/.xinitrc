@@ -53,6 +53,10 @@ xscreensaver -no-splash &
 # # Power Management
 # xfce4-power-manager &
 
+dunst &
+
+unclutter -grab &
+
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet &
 fi

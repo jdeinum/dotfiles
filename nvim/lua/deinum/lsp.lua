@@ -5,44 +5,44 @@ local vim = vim
 local status_ok, lspconfig
 status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
-	print("couldn't find lspconfig!")
-	return
+  print("couldn't find lspconfig!")
+  return
 end
 
 -- LSP config settings
 lspconfig.setup = function()
-	local signs = {
-		{ name = "DiagnosticSignError", text = "" },
-		{ name = "DiagnosticSignWarn", text = "" },
-		{ name = "DiagnosticSignHint", text = "" },
-		{ name = "DiagnosticSignInfo", text = "" },
-	}
+  local signs = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
+  }
 
-	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-	end
+  for _, sign in ipairs(signs) do
+    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+  end
 
-	local config = {
-		virtual_text = false,
-		signs = {
-			active = signs,
-		},
-		update_in_insert = true,
-		underline = true,
-		severity_sort = true,
-		float = {
-			focusable = false,
-			style = "minimal",
-			border = "rounded",
-			source = "always",
-			header = "",
-			prefix = "",
-		},
-	}
+  local config = {
+    virtual_text = false,
+    signs = {
+      active = signs,
+    },
+    update_in_insert = true,
+    underline = true,
+    severity_sort = true,
+    float = {
+      focusable = false,
+      style = "minimal",
+      border = "rounded",
+      source = "always",
+      header = "",
+      prefix = "",
+    },
+  }
 end
 
 
-  local bufopts = { noremap=true, silent=true}
+local bufopts = { noremap = true, silent = true }
 local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
@@ -52,23 +52,23 @@ capabilities.offsetEncoding = { "utf-16" }
 
 -- c/cpp
 lspconfig["clangd"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
+  on_attach = on_attach,
+  capabilities = capabilities,
 })
 
 -- typescript
 lspconfig["tsserver"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
+  on_attach = on_attach,
+  capabilities = capabilities,
 })
 
 -- rust
 lspconfig["rust_analyzer"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	settings = {
-		["rust-analyzer"] = {},
-	},
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    ["rust-analyzer"] = {},
+  },
 })
 
 lspconfig.sumneko_lua.setup {
@@ -80,7 +80,7 @@ lspconfig.sumneko_lua.setup {
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
@@ -94,24 +94,37 @@ lspconfig.sumneko_lua.setup {
   },
 }
 
-
-require'lspconfig'.elixirls.setup{
-    cmd = {"elixir-ls"}
+require 'lspconfig'.pylsp.setup {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = { 'W391' },
+          maxLineLength = 100
+        }
+      }
+    }
+  }
 }
 
-require'lspconfig'.html.setup {
+
+require 'lspconfig'.elixirls.setup {
+  cmd = { "elixir-ls" }
+}
+
+require 'lspconfig'.html.setup {
   capabilities = capabilities,
 }
 
-require'lspconfig'.cssls.setup {
+require 'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
 
-require'lspconfig'.csharp_ls.setup{}
+require 'lspconfig'.csharp_ls.setup {}
 
-require 'lspconfig'.texlab.setup{}
+require 'lspconfig'.texlab.setup {}
 
-require'lspconfig'.prosemd_lsp.setup{}
+require 'lspconfig'.prosemd_lsp.setup {}
 
 -- require("lspconfig").typescript_language_server.setup{}
 
@@ -122,5 +135,3 @@ require'lspconfig'.prosemd_lsp.setup{}
 vim.diagnostic.config({
   virtual_text = false,
 })
-
-

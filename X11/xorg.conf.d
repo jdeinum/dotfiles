@@ -13,3 +13,4 @@ Section "Screen"
             Modes "1400x1050" "1280x1024" "1280x960" "1152x864" "1024x768" "800x600"
         EndSubSection
 EndSection
+

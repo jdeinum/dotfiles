@@ -132,7 +132,6 @@ alias cdp='cd ~/Documents/projects/'
 alias cdw='cd ~/Documents/work/'
 alias cdl='cd ~/Documents/leetcode/'
 alias sn='sbt new scala/scala3.g8'
-alias sshFL='ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa  jdeinum@192.168.1.101 -p 22'
 alias nf='n $(fzf)'
 
 
@@ -153,6 +152,25 @@ alias -g hexdump='hexyl'
 alias -g curl='xh'
 alias -g find='fd'
 alias -g top='htop'
+alias -g df='duf'
+
+# ntfy -> send particular notification 
+# speedtest-cli -> internet speed test
+# ascii-image-converter -> convert image to ascii
+# asciiquairum -> cool terminal wait screen
+# toipe -> type speed test
+# entr -> execute command when particular file changes
+# bc -> math in terminal (use lua instead)
+# neofetch -> info about system
+# vd -> excel in terminal
+# imagemagick -> image stuff
+# jq -> json stuff
+# xsv -> handle csv / excel if vd is not needed
+# mosh -> better ssh
+# brightnessctl -> handle brightness for devices
+# pulseaudio-ctl -> handles volumes
+# task -> very nice task manager
+
 
 
 

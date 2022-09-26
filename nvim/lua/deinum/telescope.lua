@@ -76,12 +76,14 @@ vim.keymap.set("n", "<leader>fr", function()
 	telescope_fuzzy_git()
 end)
 
-vim.keymap.set("n", "<leader>ft", ":Telescope current_buffer_fuzzy_find<CR>")
-vim.keymap.set("n", "<leader>fn", ":Telescope git_files<CR>")
-vim.keymap.set("n", "<leader>fm", ":Telescope find_files<CR>")
-vim.keymap.set("n", "<leader>fg", ":Telescope treesitter<CR>")
-vim.keymap.set("n", "<leader>;", ":Telescope buffers<CR>")
-vim.keymap.set("n", "<leader>fp", ":Telescope grep_string<CR>")
-vim.keymap.set("n", "<leader>ff", ":Telescope live_grep<CR>")
-vim.keymap.set("n", "<c-p>", ":Telescope commands<CR>")
+local opts = {silent = true}
+
+vim.keymap.set("n", "<leader>ft", ":Telescope current_buffer_fuzzy_find<CR>", opts)
+vim.keymap.set("n", "<leader>fn", ":Telescope git_files<CR>", opts)
+vim.keymap.set("n", "<leader>fm", ":Telescope find_files<CR>", opts)
+vim.keymap.set("n", "<leader>fg", ":Telescope treesitter<CR>", opts)
+vim.keymap.set("n", "<leader>;", ":Telescope buffers<CR>", opts)
+vim.keymap.set("n", "<leader>fp", ":Telescope grep_string<CR>", opts)
+vim.keymap.set("n", "<leader>ff", ":Telescope live_grep<CR>", opts)
+vim.keymap.set("n", "<c-p>", ":Telescope commands<CR>", opts)
 
