@@ -1,17 +1,21 @@
 require("null-ls").setup({
-  sources = {
-    require("null-ls").builtins.formatting.stylua,
-    require("null-ls").builtins.diagnostics.eslint,
-    require("null-ls").builtins.diagnostics.credo,
+	sources = {
+		require("null-ls").builtins.formatting.stylua, -- JS linter
+		require("null-ls").builtins.diagnostics.eslint, -- JS linter
+		require("null-ls").builtins.diagnostics.luacheck, -- lua linter
+		require("null-ls").builtins.diagnostics.credo, -- elixir linter
+		require("null-ls").builtins.diagnostics.proselint, -- english linter
+		require("null-ls").builtins.diagnostics.tidy, -- HTML / XML linter
+		require("null-ls").builtins.formatting.beautysh, -- Beautify shell scripts
+		require("null-ls").builtins.formatting.clang_format, -- Beautify clang
+	},
+	on_attach = function(client, bufnr)
+		if client.server_capabilities.documentFormattingProvider then
+			vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>")
+		end
 
-  },
-  on_attach = function(client, bufnr)
-    if client.server_capabilities.documentFormattingProvider then
-      vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>")
-    end
-
-    if client.server_capabilities.documentRangeFormattingProvider then
-      vim.cmd("xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting()<CR>")
-    end
-  end,
+		if client.server_capabilities.documentRangeFormattingProvider then
+			vim.cmd("xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting()<CR>")
+		end
+	end,
 })

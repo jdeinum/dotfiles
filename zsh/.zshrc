@@ -129,12 +129,10 @@ alias -g ct='cargo t'
 alias -g gah='git stash; and git pull --rebase; and git stash pop'
 alias -g hopper='/opt/hopper-v4/bin/Hopper 2>/dev/null &'
 alias cdp='cd ~/Documents/projects/'
-alias cdw='cd ~/Documents/work/'
+alias cdw='cd ~/Work/'
 alias cdl='cd ~/Documents/leetcode/'
 alias sn='sbt new scala/scala3.g8'
 alias nf='n $(fzf)'
-
-
 
 alias -g p='yay'
 alias -g up='yay -Syu'
@@ -160,7 +158,7 @@ alias -g df='duf'
 # asciiquairum -> cool terminal wait screen
 # toipe -> type speed test
 # entr -> execute command when particular file changes
-# bc -> math in terminal (use lua instead)
+# bc -> math in terminal (use lua / py instead)
 # neofetch -> info about system
 # vd -> excel in terminal
 # imagemagick -> image stuff
@@ -170,7 +168,16 @@ alias -g df='duf'
 # brightnessctl -> handle brightness for devices
 # pulseaudio-ctl -> handles volumes
 # task -> very nice task manager
-
+# pgcli -> nice cli for anything postgres
+# xh / httpie -> anything http related
+# pandoc -> any kind of document conversion
+# nmon -> monitor anything
+# ss -> socket statistcs
+# ctop -> docker info
+# terijira -> jira intigration for terminal
+# gitui -> git tool 
+# timew -> time management tool
+# hyperfine -> benchmarking tool
 
 
 
