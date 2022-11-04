@@ -105,7 +105,7 @@ packer.startup(function(use)
   use({ "godlygeek/tabular" })
 
   -- move hella fast
-  use("ggandor/lightspeed.nvim")
+  use "ggandor/leap.nvim"
 
   -- need to use because we don't have syntax highlighting for elixir yet
   -- use 'elixir-editors/vim-elixir'
@@ -134,7 +134,7 @@ packer.startup(function(use)
 
   use("lervag/vimtex")
 
-  use({ "ellisonleao/glow.nvim" })
+  use 'ThePrimeagen/vim-be-good'
 
   use({
     "iamcco/markdown-preview.nvim",

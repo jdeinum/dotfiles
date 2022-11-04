@@ -1,4 +1,4 @@
-------------------------GLOBALS + LEADERS--------------------------------------
+-----------------------GLOBALS + LEADERS--------------------------------------
 local vim = vim
 local g = vim.g
 
@@ -33,3 +33,4 @@ require("deinum.colorizer")
 require("deinum.luasnip")
 require("deinum.vimtex")
 require("deinum.mdpreview")
+require("deinum.leap")

@@ -72,6 +72,7 @@ lspconfig["rust_analyzer"].setup({
 })
 
 lspconfig.sumneko_lua.setup {
+  on_attach = on_attach,
   settings = {
     Lua = {
       runtime = {
@@ -95,12 +96,13 @@ lspconfig.sumneko_lua.setup {
 }
 
 require 'lspconfig'.pylsp.setup {
+  on_attach = on_attach,
   settings = {
     pylsp = {
       plugins = {
         pycodestyle = {
           ignore = { 'W391' },
-          maxLineLength = 100
+          maxLineLength = 80
         }
       }
     }
@@ -109,11 +111,13 @@ require 'lspconfig'.pylsp.setup {
 
 
 require 'lspconfig'.elixirls.setup {
-  cmd = { "elixir-ls" }
+  cmd = { "elixir-ls" },
+  on_attach = on_attach,
 }
 
 require 'lspconfig'.html.setup {
   capabilities = capabilities,
+  on_attach = on_attach
 }
 
 require 'lspconfig'.cssls.setup {
@@ -125,6 +129,29 @@ require 'lspconfig'.csharp_ls.setup {}
 require 'lspconfig'.texlab.setup {}
 
 require 'lspconfig'.prosemd_lsp.setup {}
+
+local configs = require('lspconfig.configs')
+local lspconfig = require('lspconfig')
+if not configs.awklsp then
+  configs.awklsp = {
+    default_config = {
+      cmd = { 'awk-language-server' },
+      filetypes = { 'awk' },
+      single_file_support = true,
+      handlers = {
+        ['workspace/workspaceFolders'] = function()
+          return {{
+            uri = 'file://' .. vim.fn.getcwd(),
+            name = 'current_dir',
+          }}
+        end
+      }
+    },
+  }
+end
+lspconfig.awklsp.setup{}
+
+require'lspconfig'.dartls.setup{}
 
 -- require("lspconfig").typescript_language_server.setup{}
 

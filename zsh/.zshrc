@@ -143,7 +143,7 @@ alias -g ll='exa -l'
 alias -g lll='exa -la'
 alias -g cat='bat'
 alias -g dig='dog'
-alias -g diff='difftc'
+alias -g diff='difft'
 alias -g traceroute='mtr'
 alias -g locate='plocate'
 alias -g hexdump='hexyl'
@@ -178,7 +178,18 @@ alias -g df='duf'
 # gitui -> git tool 
 # timew -> time management tool
 # hyperfine -> benchmarking tool
-
+# cowsay -> have a cow say
+# figlet -> have things in nice big letters!
+# loadtest -> stresstest websites
+# cgasm -> terminal documentation for x86
+# iredis -> redis client
+# lazydocker
+# ticker -> keep track of stocks
+# up -> live pipe view
+# ots -> secret message urls
+# yq -> jq but for yaml
+# stegcloak -> hide secrets in text
+# pastel -> manipulate colors
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

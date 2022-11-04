@@ -46,6 +46,7 @@ myConfig = def
     , ("<XF86Favorites>", spawn "/opt/hopper-v4/bin/Hopper 2>/dev/null &")
     , ("<XF86Tools>", spawn "calibre")
     , ("M-d", spawn "discord")
+    , ("M-g", spawn "jupyter lab")
 
 
     ]
