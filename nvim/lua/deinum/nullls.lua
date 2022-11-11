@@ -8,6 +8,8 @@ require("null-ls").setup({
 		require("null-ls").builtins.diagnostics.tidy, -- HTML / XML linter
 		require("null-ls").builtins.formatting.beautysh, -- Beautify shell scripts
 		require("null-ls").builtins.formatting.clang_format, -- Beautify clang
+		-- require("null-ls").builtins.diagnostics.pylint, -- Beautify clang
+		require("null-ls").builtins.formatting.black, -- Beautify clang
 	},
 	on_attach = function(client, bufnr)
 		if client.server_capabilities.documentFormattingProvider then
