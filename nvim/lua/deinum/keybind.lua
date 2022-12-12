@@ -2,10 +2,12 @@ local vim = vim
 
 
 -- Disable home row keys
-vim.keymap.set("", "<up>", "<nop>")
-vim.keymap.set("", "<down>", "<nop>")
-vim.keymap.set("", "<left>", "<nop>")
-vim.keymap.set("", "<right>", "<nop>")
+vim.keymap.set("i", "<up>", "<nop>")
+vim.keymap.set("i", "<down>", "<nop>")
+vim.keymap.set("i", "<left>", "<nop>")
+vim.keymap.set("i", "<right>", "<nop>")
+
+
 
 
 -- Left and right can switch buffers

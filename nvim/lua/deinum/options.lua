@@ -8,7 +8,11 @@ local wo = vim.wo
 
 o.termguicolors = true
 o.background = 'dark'
-vim.cmd("colorscheme nightfly")
+-- vim.cmd("colorscheme nightfly")
+-- vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme duskfox")
+-- vim.cmd("colorscheme nordfox")
+-- vim.cmd("colorscheme carbonfox")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd 'colorscheme tokyonight'
 o.syntax = 'on'

@@ -96,18 +96,15 @@ packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 
 	-- a nice diff view thats easy to cycle through
-	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+	-- use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	-- treesitter gives us source code parsing
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
 	-- nvim-dap allows us to debug within our editor
-	-- use("mfussenegger/nvim-dap")
-	-- use("theHamsta/nvim-dap-virtual-text")
-	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-
-	-- neotest lets us test from within nvim
-	-- use({ "nvim-neotest/neotest", requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter", "antoinemadec/FixCursorHold.nvim" }, })
+	use("mfussenegger/nvim-dap")
+	use("theHamsta/nvim-dap-virtual-text")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 
 	-- It's nice to see what we yank
 	use({ "machakann/vim-highlightedyank" })
@@ -145,8 +142,11 @@ packer.startup(function(use)
 		end,
 	})
 
-	-- fast file switching / terminal switching
-	use("ThePrimeagen/harpoon")
+	use("lukas-reineke/indent-blankline.nvim")
+
+	use("EdenEast/nightfox.nvim") -- Packer
+
+  use "github/copilot.vim"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
