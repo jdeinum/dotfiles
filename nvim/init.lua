@@ -24,11 +24,12 @@ require("deinum.keybind")
 require("deinum.gitsigns")
 require("deinum.packer")
 require("deinum.colorizer")
+require("deinum.diffview")
 require("deinum.luasnip")
 require("deinum.vimtex")
 require("deinum.mdpreview")
 require("deinum.surround")
 require("deinum.indent")
 require("deinum.copilot")
-require "deinum.dap"
+-- require "deinum.dap"
 

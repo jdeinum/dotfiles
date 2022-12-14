@@ -4,7 +4,7 @@ require "gitsigns".diffthis(branch)
 end
 
 require('gitsigns').setup({
-current_line_blame = true,
+current_line_blame = false,
 on_attach = function(bufnr)
   -- Navigation
   vim.keymap.set('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })

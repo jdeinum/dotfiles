@@ -1,4 +1,5 @@
 ------------------------PACKER-------------------------------------------------
+local vim = vim
 local fn = vim.fn
 
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -46,6 +47,7 @@ packer.startup(function(use)
 
 	-- dependency for a bunch of other stuff
 	use("kyazdani42/nvim-web-devicons")
+  use("onsails/lspkind.nvim")
 
 	-- add some very nice commenting functiuonality
 	use("numToStr/Comment.nvim")
@@ -56,19 +58,17 @@ packer.startup(function(use)
 	-- all of our colors
 	use("bluz71/vim-nightfly-guicolors")
 	use("folke/tokyonight.nvim")
-	use("shaunsingh/solarized.nvim")
-	use("ellisonleao/gruvbox.nvim")
+	use("EdenEast/nightfox.nvim")
 
 	-- editing html / parantheses / quotes / etc..
 	use({
 		"kylechui/nvim-surround",
-		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		tag = "*",
 		config = function()
-			require("nvim-surround").setup({
-				-- Configuration here, or leave empty to use defaults
-			})
+			require("nvim-surround").setup({})
 		end,
 	})
+
 
 	-- All of our completion engine plugins
 	use("hrsh7th/nvim-cmp")
@@ -77,7 +77,7 @@ packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline")
 	use("saadparwaiz1/cmp_luasnip")
 	use("hrsh7th/cmp-nvim-lsp")
-
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
 	-- snippets for pretty much every language
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
@@ -94,20 +94,11 @@ packer.startup(function(use)
 
 	-- git signs so we can see what changed
 	use("lewis6991/gitsigns.nvim")
-
-	-- a nice diff view thats easy to cycle through
-	-- use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	-- treesitter gives us source code parsing
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-
-	-- nvim-dap allows us to debug within our editor
-	use("mfussenegger/nvim-dap")
-	use("theHamsta/nvim-dap-virtual-text")
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-
-	-- It's nice to see what we yank
-	use({ "machakann/vim-highlightedyank" })
+	use("p00f/nvim-ts-rainbow")
 
 	-- very handy tool to help align columnar data
 	use({ "godlygeek/tabular" })
@@ -142,11 +133,15 @@ packer.startup(function(use)
 		end,
 	})
 
+	-- handy to see which scope you are working in, especially for whitespace
+	-- concious languages
 	use("lukas-reineke/indent-blankline.nvim")
 
-	use("EdenEast/nightfox.nvim") -- Packer
+	-- the man, the myth, the legend
+	use("github/copilot.vim")
 
-  use "github/copilot.vim"
+  -- startup time
+  use "dstein64/vim-startuptime"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

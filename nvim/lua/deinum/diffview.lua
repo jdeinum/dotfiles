@@ -16,15 +16,6 @@ require("diffview").setup({
 		done = "✓",
 	},
 	view = {
-		-- Configure the layout and behavior of different types of views.
-		-- Available layouts:
-		--  'diff1_plain'
-		--    |'diff2_horizontal'
-		--    |'diff2_vertical'
-		--    |'diff3_horizontal'
-		--    |'diff3_vertical'
-		--    |'diff3_mixed'
-		--    |'diff4_mixed'
 		-- For more info, see ':h diffview-config-view.x.layout'.
 		default = {
 			-- Config for changed files, and staged files in diff views.
@@ -48,7 +39,7 @@ require("diffview").setup({
 		},
 		win_config = { -- See ':h diffview-config-win_config'
 			position = "left",
-			width = 35,
+			width = 25,
 			win_opts = {},
 		},
 	},
@@ -82,8 +73,8 @@ require("diffview").setup({
 		view = {
 			-- The `view` bindings are active in the diff buffers, only when the current
 			-- tabpage is a Diffview.
-			["<tab>"] = actions.select_next_entry, -- Open the diff for the next file
-			["<s-tab>"] = actions.select_prev_entry, -- Open the diff for the previous file
+			["<C-n>"] = actions.select_next_entry, -- Open the diff for the next file
+			["<C-p>"] = actions.select_prev_entry, -- Open the diff for the previous file
 			["gf"] = actions.goto_file, -- Open the file in a new split in the previous tabpage
 			["<C-w><C-f>"] = actions.goto_file_split, -- Open the file in a new split
 			["<C-w>gf"] = actions.goto_file_tab, -- Open the file in a new tabpage
@@ -129,8 +120,8 @@ require("diffview").setup({
 			["L"] = actions.open_commit_log, -- Open the commit log panel.
 			["<c-b>"] = actions.scroll_view(-0.25), -- Scroll the view up
 			["<c-f>"] = actions.scroll_view(0.25), -- Scroll the view down
-			["<tab>"] = actions.select_next_entry,
-			["<s-tab>"] = actions.select_prev_entry,
+			["<C-n>"] = actions.select_next_entry,
+			["<C-p>"] = actions.select_prev_entry,
 			["gf"] = actions.goto_file,
 			["<C-w><C-f>"] = actions.goto_file_split,
 			["<C-w>gf"] = actions.goto_file_tab,
@@ -158,8 +149,8 @@ require("diffview").setup({
 			["<2-LeftMouse>"] = actions.select_entry,
 			["<c-b>"] = actions.scroll_view(-0.25),
 			["<c-f>"] = actions.scroll_view(0.25),
-			["<tab>"] = actions.select_next_entry,
-			["<s-tab>"] = actions.select_prev_entry,
+			["<C-n>"] = actions.select_next_entry,
+			["<C-p>"] = actions.select_prev_entry,
 			["gf"] = actions.goto_file,
 			["<C-w><C-f>"] = actions.goto_file_split,
 			["<C-w>gf"] = actions.goto_file_tab,
@@ -168,7 +159,7 @@ require("diffview").setup({
 			["g<C-x>"] = actions.cycle_layout,
 		},
 		option_panel = {
-			["<tab>"] = actions.select_entry,
+			["<C-Space>"] = actions.select_entry,
 			["q"] = actions.close,
 		},
 	},
