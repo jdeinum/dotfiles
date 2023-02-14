@@ -1,6 +1,5 @@
 aflplusplus
 alacritty
-alacritty-theme
 alacritty-themes
 alsa-utils
 anki
@@ -18,7 +17,6 @@ automake
 avrdude
 base
 bat
-batterymon-git
 beautysh
 beep
 binutils
@@ -48,7 +46,6 @@ cronie
 ctop
 cups
 cups-pdf
-cutecom
 dcfldd
 ddgr
 dialog
@@ -70,6 +67,7 @@ elixir
 entr
 ettercap
 exa
+expac
 fakeroot
 fd
 figlet
@@ -90,10 +88,7 @@ gimp
 git
 git-extensions
 gitui
-glow
 gnuplot
-gnuradio
-gnuradio-companion
 go
 gparted
 gping
@@ -141,7 +136,6 @@ mtr
 ncpamixer
 ncurses5-compat-libs
 neofetch
-neomutt
 netcoredbg
 network-manager-applet
 networkmanager
@@ -161,7 +155,6 @@ ntfy
 ntp
 nvim-nightly
 nvim-packer-git
-obs-studio
 openssh
 opus-tools
 ots
@@ -176,11 +169,9 @@ pavucontrol
 pdftk
 perf
 pgcli
-picom
 pkgconf
 plocate
 podman-compose
-polybar
 powerdevil
 procs
 prospect-mail-bin
@@ -192,7 +183,6 @@ pulseaudio-ctl
 putty
 pwndbg-git
 python-pip
-pywal-git
 qbittorrent
 qemu-full
 r
@@ -223,7 +213,6 @@ strace
 sudo
 surfshark-gui-bin
 surfshark-vpn
-swi-prolog
 sxhkd
 syslog-ng
 tailscale
@@ -245,10 +234,8 @@ texlive-publishers
 texlive-science
 tidy
 timew
-tinyserial
 tldr
 tmux
-toilet
 toipe
 tor
 tor-browser
@@ -267,7 +254,6 @@ vi
 vidir
 visidata
 vlc
-vmware-workstation15
 vsftpd
 vtop
 wavemon
