@@ -198,10 +198,9 @@ gu () {
   git push;
 }
 
-# up runs ~/.dotfiles/scripts/collect.sh silently
-# then updates the system
+# commit and push the ~/.dotfiles repo then updates the system
 up () {
-  ~/.dotfiles/scripts/collect.sh &> /dev/null;
+  git -C ~/.dotfiles add -u && git -C ~/.dotfiles commit -m "$(date) | Auto Merged" && git -C ~/.dotfiles push;
   yay -Syu;
 }
 
@@ -211,12 +210,15 @@ up () {
 
 # check if fzf is installed
 # if it is not installed, then install it
-if [[ ! -f /usr/share/zlua ]]; then
-  git clone --depth 1 https://github.com/skywind3000/z.lua.git /usr/share/zlua > /dev/null 2>&1
+if [ ! -d ~/.lua/zlua ]; then
+  mkdir ~/.lua
+  git clone --depth 1 https://github.com/skywind3000/z.lua.git ~/.lua/zlua
 fi
 
 # Enable fzf key bindings and fuzzy completion
-source /usr/share/zlua/z.lua
 export FZF_DEFAULT_COMMAND='fd'
 zstyle ':completion:*' list-colors
-eval "$(lua /usr/share/zlua/z.lua --init zsh)"
+eval "$(lua ~/.lua/zlua/z.lua --init zsh)"
+
+
+

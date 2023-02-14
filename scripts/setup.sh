@@ -15,8 +15,10 @@ if ! command -v yay &> /dev/null; then
     rm -rf yay
 fi
 
-# install oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# install oh my zsh if it is not installed
+if [ ! -d ~/.oh-my-zsh ]; then
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 # Install all packages from the package list.
 yay -S --needed - < ~/.dotfiles/pacman/packages.txt
@@ -39,26 +41,26 @@ ln -sf ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf ~/.dotfiles/x11/xinitrc ~/.xinitrc
 
 # xmonad
-ln -sf ~/.dotfiles/xmonad/xmonad.hs ~/.xmonad/xmonad.hs
+ln -sf ~/.dotfiles/xmonad/xmonad.hs ~/.config/xmonad/xmonad.hs
 
 # xmobar
 ln -sf ~/.dotfiles/xmobar/xmobarrc ~/.xmobarrc
 
-# install plugins for nvim
-nvim +PackerSync +qall
+# install plugins for nvim silently
+nvim +PlugInstall +qall
 
 # set zsh as default shell
 chsh -s $(which zsh)
 
 # set alacritty as default terminal
-sudo export TERMINAL=alacritty
+export TERMINAL=alacritty
 
 # set nvim as default editor
-sudo export EDITOR=nvim
+export EDITOR=nvim
 git config --global core.editor nvim
 
 # create a hard link for nvim to /usr/bin/n
-sudo ln /usr/bin/nvim /usr/bin/n
+ln /usr/bin/nvim /usr/bin/n
 
 
 
