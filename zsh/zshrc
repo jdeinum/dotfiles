@@ -1,7 +1,7 @@
+# start x if not running and on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 startx
 fi
-
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -64,7 +64,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -107,18 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
 
-# some abbreviations
+
+## ALIASES
 alias -g yr='cal -y'
 alias -g m='make'
 alias -g gc='git checkout'
@@ -126,15 +117,12 @@ alias -g ga='git add -p'
 alias -g vimdiff='nvim -d'
 alias -g ct='cargo t'
 alias -g gah='git stash; and git pull --rebase; and git stash pop'
-# alias -g hopper='/opt/hopper-v4/bin/Hopper 2>/dev/null &'
 alias cdp='cd ~/Documents/projects/'
 alias cdw='cd ~/Work/latium'
 alias cdl='cd ~/Documents/leetcode/'
-alias sn='sbt new scala/scala3.g8'
 alias nf='n $(fzf)'
 
 alias -g p='yay'
-alias -g up='yay -Syu'
 alias -g p='yay'
 alias -g l='exa'
 alias -g ls='exa'
@@ -194,39 +182,41 @@ alias -g psu="procs --pager disable $(whoami)"
 # pastel -> manipulate colors
 # fuser -> show which processes are using a given file, filesystem, or sockets
 # lsof -> list open files
-#
 
 
 
 ##################### USER DEFINED FUNCTIONS #################################
 
-# The only paramter to this function is the string for the commit message
+# git add -u and commit with a message
 gu () {
   git add -u;
-
   if [[ $# < 1 ]]; then
     git commit -m "$(date) | Auto Merged";
   else
     git commit -m "$(date) | $1";
   fi
-
   git push;
-
 }
 
-jl () {
-  docker stop notebook 2>/dev/null
-  docker start notebook 2>/dev/null
-  sleep 0.2
-  firefox "http://127.0.0.1:8888/lab"
-
+# up runs ~/.dotfiles/scripts/collect.sh silently
+# then updates the system
+up () {
+  ~/.dotfiles/scripts/collect.sh &> /dev/null;
+  yay -Syu;
 }
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# check if fzf is installed
+# if it is not installed, then install it
+if [[ ! -f /usr/share/zlua ]]; then
+  git clone --depth 1 https://github.com/skywind3000/z.lua.git /usr/share/zlua > /dev/null 2>&1
+fi
+
+# Enable fzf key bindings and fuzzy completion
+source /usr/share/zlua/z.lua
 export FZF_DEFAULT_COMMAND='fd'
 zstyle ':completion:*' list-colors
-eval "$(lua ~/.lua/z.lua --init zsh)"
+eval "$(lua /usr/share/zlua/z.lua --init zsh)"
