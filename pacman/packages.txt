@@ -22,7 +22,6 @@ beep
 binutils
 bison
 bluez-utils
-boxes
 brightnessctl
 calibre
 caprine
