@@ -1,5 +1,6 @@
 # This script puts all of our managed config files in our git directory
 # located at ~/.dotfiles and then pushes them to github.
+# not used anymore because I use sym links
 
 # nvim
 cp -r ~/.config/nvim ~/.dotfiles/nvim
@@ -23,7 +24,7 @@ cp ~/.xmonad/xmonad.hs ~/.dotfiles/xmonad/xmonad.hs
 cp ~/.xmobarrc ~/.dotfiles/xmobar/xmobarrc
 
 # get installed packages
-pacman -Qqe > ~/.dotfiles/pacman/pacman.txt
+pacman -Qqe > ~/.dotfiles/pacman/packages.txt.txt
 
 # commit and push
 git -C ~/.dotfiles && git add . && git commit -m "$(date) -- Backup" && git push
