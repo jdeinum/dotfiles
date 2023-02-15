@@ -29,7 +29,7 @@ myConfig = def
     { modMask    = mod4Mask      -- Rebind Mod to the Super key
     , layoutHook = spacingWithEdge 5 $ myLayout      -- Use custom layouts
     , manageHook = myManageHook  -- Match on certain windows
-    , focusedBorderColor = "#FF00FF"
+    , focusedBorderColor = "#FF3131"
     }
   `additionalKeysP`
     [ ("M-S-z", spawn "xscreensaver-command -lock")

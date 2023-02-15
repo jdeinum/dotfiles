@@ -31,5 +31,3 @@ require("deinum.mdpreview")
 require("deinum.surround")
 require("deinum.indent")
 require("deinum.copilot")
--- -- require "deinum.dap"
-

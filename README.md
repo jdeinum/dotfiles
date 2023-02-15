@@ -1,9 +1,6 @@
-# Backup + Restoring Configs
+# Configs
+All of my configs + packages are backed up every time I update my system.
 
-The following script is executed when updating the system:
 
-```bash
 
-yay -Qqe 
 
-```
