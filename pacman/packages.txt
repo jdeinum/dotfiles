@@ -28,12 +28,9 @@ cgasm
 chrony
 chrpath
 clang
-clingo
 cmake
 cmus
-cockpit
 codelldb
-connman
 coreimage
 coreshot
 cowsay
@@ -64,7 +61,6 @@ dunst
 efibootmgr
 elixir
 entr
-ettercap
 exa
 expac
 fakeroot
@@ -73,7 +69,6 @@ figlet
 file
 findutils
 firefox
-fish
 flameshot
 flatpak
 flex
@@ -113,7 +108,6 @@ lazydocker
 lib32-fakeroot
 lib32-libltdl
 libiio
-libreoffice-fresh
 libtool
 linux
 linux-firmware
@@ -192,7 +186,6 @@ rsync
 rust-analyzer
 rustup
 sbcl
-scala3
 scons
 screen
 seahorse
@@ -209,7 +202,6 @@ surfshark-gui-bin
 surfshark-vpn
 sxhkd
 syslog-ng
-tailscale
 task
 tcpdump
 teams-for-linux
@@ -321,7 +313,6 @@ xsel
 xss-lock
 xsv
 xterm
-xxd-standalone
 yarn
 yay
 yq
