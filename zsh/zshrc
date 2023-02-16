@@ -201,7 +201,7 @@ gu () {
 # commit and push the ~/.dotfiles repo then updates the system
 up () {
   yay -Qqe > ~/.dotfiles/pacman/packages.txt
-  git -C ~/.dotfiles add -u && git -C ~/.dotfiles commit -q -m "$(date) | Auto Merged" && git -C ~/.dotfiles push -q;
+  git -C ~/.dotfiles add . && git -C ~/.dotfiles commit -q -m "$(date) | Auto Merged" && git -C ~/.dotfiles push -q;
   yay -Syu;
 }
 
