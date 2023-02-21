@@ -1,7 +1,6 @@
 alacritty
 alacritty-themes
 alsa-utils
-anki
 apache
 arandr
 arduino-cli
