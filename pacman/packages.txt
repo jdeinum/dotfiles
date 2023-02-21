@@ -45,6 +45,7 @@ czkawka-gui-bin
 dcfldd
 ddgr
 dialog
+diff2html
 diffstat
 difftastic
 discord
