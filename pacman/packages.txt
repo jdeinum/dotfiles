@@ -95,6 +95,7 @@ hopper4
 htop
 httpie
 hyperfine
+imagemagick
 inetutils
 inkscape
 inotify-tools
