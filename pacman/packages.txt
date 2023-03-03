@@ -12,6 +12,7 @@ astro-cli
 audacity
 autoconf
 automake
+avr-binutils
 avrdude
 base
 bat
@@ -206,6 +207,7 @@ syslog-ng
 task
 tcpdump
 teams-for-linux
+teamviewer
 texinfo
 texlive-bibtexextra
 texlive-core
@@ -314,6 +316,7 @@ xsel
 xss-lock
 xsv
 xterm
+xxd-standalone
 yarn
 yay
 yq
