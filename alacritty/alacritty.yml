@@ -131,30 +131,34 @@ font:
     # If the bold italic family is not specified, it will fall back to the
     # value spec
 colors:
-  name: Erebus
-  author: ""
+  # Default colors
   primary:
-    background: "#000000"
-    foreground: "#ffffff"
+    background: '#3C4C55'
+    foreground: '#C5D4DD'
+
   cursor:
-    text: "#000000"
-    cursor: "#ffffff"
+    text: '#212121'
+    cursor: '#C0C5CE'
+
+  # Normal colors
   normal:
-    black: "#757575"
-    red: "#ff5f5f"
-    green: "#de8a36"
-    yellow: "#d78787"
-    blue: "#af5fd7"
-    magenta: "#ff87d7"
-    cyan: "#dea3e5"
-    white: "#b8b8b8"
+    black: '#3C4C55'
+    red: '#DF8C8C'
+    green: '#A8CE93'
+    yellow: '#DADA93'
+    blue: '#83AFE5'
+    magenta: '#9A93E1'
+    cyan: '#7FC1CA'
+    white: '#C5D4DD'
+
+  # Bright colors
   bright:
-    black: "#b8b8b8"
-    red: "#d78787"
-    green: "#ff9f6f"
-    yellow: "#ff5f5f"
-    blue: "#dea3e5"
-    magenta: "#d7afaf"
-    cyan: "#af5fd7"
-    white: "#757575"
-theme: Erebus
+    black: '#899BA6'
+    red: '#F2C38F'
+    green: '#A8CE93'
+    yellow: '#DADA93'
+    blue: '#83AFE5'
+    magenta: '#D18EC2'
+    cyan: '#7FC1CA'
+    white: '#E6EEF3'
+theme: Nova

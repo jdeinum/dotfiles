@@ -6,11 +6,11 @@ require("null-ls").setup({
     -- require("null-ls").builtins.formatting.yamlfmt,
     -- require("null-ls").builtins.diagnostics.yamllint,
 		require("null-ls").builtins.diagnostics.luacheck, -- lua linter
-		require("null-ls").builtins.diagnostics.proselint, -- english linter
+		-- require("null-ls").builtins.diagnostics.proselint, -- english linter
 		-- require("null-ls").builtins.diagnostics.tidy, -- HTML / XML linter
 		require("null-ls").builtins.formatting.beautysh, -- Beautify shell scripts
 		require("null-ls").builtins.formatting.clang_format, -- Beautify clang
-		require("null-ls").builtins.formatting.black, -- Python linter
+		-- require("null-ls").builtins.formatting.black, -- Python linter
 		-- require("null-ls").builtins.code_actions.gitsigns, -- Python linter
 	},
 	on_attach = function(client, bufnr)
