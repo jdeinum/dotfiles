@@ -66,6 +66,7 @@ exa
 expac
 fakeroot
 fd
+feh
 figlet
 file
 findutils
@@ -147,6 +148,8 @@ ntfs-3g
 ntfy
 ntp
 nvim-packer-git
+openjdk-doc
+openjdk-src
 openssh
 opus-tools
 ots
@@ -223,6 +226,7 @@ texlive-publishers
 texlive-science
 tidy
 timew
+tk
 tldr
 tmux
 toipe
@@ -232,6 +236,7 @@ trayer
 tree
 tree-sitter
 ttc-iosevka
+ttf-bitstream-vera
 ttf-font-awesome
 uboot-tools
 unclutter
