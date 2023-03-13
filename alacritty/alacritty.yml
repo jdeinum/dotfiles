@@ -133,32 +133,32 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#3C4C55'
-    foreground: '#C5D4DD'
-
-  cursor:
-    text: '#212121'
-    cursor: '#C0C5CE'
+    background: '0x22272e'
+    foreground: '0x768390'
 
   # Normal colors
   normal:
-    black: '#3C4C55'
-    red: '#DF8C8C'
-    green: '#A8CE93'
-    yellow: '#DADA93'
-    blue: '#83AFE5'
-    magenta: '#9A93E1'
-    cyan: '#7FC1CA'
-    white: '#C5D4DD'
+    black: '0x22272e'
+    red: '0xff938a'
+    green: '0x6bc46d'
+    yellow: '0xc69026'
+    blue: '0x6cb6ff'
+    magenta: '0xb083f0'
+    cyan: '0x56d4dd'
+    white: '0x768390'
 
   # Bright colors
   bright:
-    black: '#899BA6'
-    red: '#F2C38F'
-    green: '#A8CE93'
-    yellow: '#DADA93'
-    blue: '#83AFE5'
-    magenta: '#D18EC2'
-    cyan: '#7FC1CA'
-    white: '#E6EEF3'
-theme: Nova
+    black: '0x636e7b'
+    red: '0xff938a'
+    green: '0x6bc46d'
+    yellow: '0xdaaa3f'
+    blue: '0x6cb6ff'
+    magenta: '0xdcbdfb'
+    cyan: '0x56d4dd'
+    white: '0x768390'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xff938a' }
+theme: github_dimmed

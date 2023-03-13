@@ -75,6 +75,7 @@ flameshot
 flatpak
 flex
 fprintd
+fzf
 gawk
 gcc
 gdb
