@@ -8,8 +8,6 @@ Config { overrideRedirect = False
                       Run Cpu
                         [ "-L", "3"
                         , "-H", "50"
-                        , "--high"  , "red"
-                        , "--normal", "green"
                         ] 10
                     , Run Alsa "default" "Master"
                         [ "--template", "<volumestatus>"
