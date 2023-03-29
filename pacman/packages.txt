@@ -1,3 +1,4 @@
+1password
 alacritty
 alacritty-themes
 alsa-utils
@@ -109,6 +110,7 @@ iw
 jdk8-openjdk
 jupyterlab
 kmix
+kwalletmanager
 laptop-mode-tools
 lazydocker
 lib32-fakeroot
@@ -163,6 +165,7 @@ pandoc-cli
 pandoc-crossref
 pastel
 patch
+patchelf
 pavucontrol
 pdftk
 perf
