@@ -1,6 +1,7 @@
 alacritty
 alacritty-themes
 alsa-utils
+ansible
 apache
 arandr
 arduino-cli
@@ -91,6 +92,7 @@ gping
 grep
 groff
 grub
+gtest
 gzip
 hdparm
 hexyl
@@ -206,6 +208,7 @@ strace
 sudo
 surfshark-gui-bin
 surfshark-vpn
+swi-prolog
 sxhkd
 syslog-ng
 task

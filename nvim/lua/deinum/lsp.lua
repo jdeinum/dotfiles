@@ -35,7 +35,10 @@ local servers = {
 	"pyright",
   "bashls",
   "awk_ls",
-  "yamlls"
+  "yamlls",
+  "gopls",
+  "jsonls",
+
 }
 
 -- setup each server

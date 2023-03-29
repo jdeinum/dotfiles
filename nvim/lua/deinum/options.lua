@@ -55,7 +55,7 @@ vim.cmd [[
 nnoremap <leader>o :e <C-R>=expand("%:p:h") . "/" <CR>
 " Very magic by default
 nnoremap ? ?\v
-" nnoremap / /\v
+nnoremap / /\v
 cnoremap %s/ %sm/
 ]]
 
