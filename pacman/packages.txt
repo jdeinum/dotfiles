@@ -129,6 +129,7 @@ m4
 make
 masterpdfeditor
 mawk
+mbuffer
 minicom
 mosh
 mtools
