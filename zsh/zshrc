@@ -221,5 +221,7 @@ export FZF_DEFAULT_COMMAND='fd'
 zstyle ':completion:*' list-colors
 eval "$(lua ~/.lua/zlua/z.lua --init zsh)"
 
+GOPATH="/home/deinum/Documents/go"
+
 
 
