@@ -32,7 +32,6 @@ chrpath
 clang
 cmake
 cmus
-codelldb
 coreimage
 coreshot
 cowsay
