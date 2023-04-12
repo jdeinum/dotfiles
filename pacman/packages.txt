@@ -85,6 +85,7 @@ gimp
 git
 git-extensions
 gitui
+gnu-netcat
 gnuplot
 go
 gparted
