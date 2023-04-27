@@ -1,7 +1,6 @@
 local o = vim.o
 local vim = vim
 
-
 -- Make sure its installed properly
 local status_ok, lspconfig
 status_ok, lspconfig = pcall(require, "lspconfig")
@@ -12,11 +11,12 @@ end
 
 -- Saga handles everything but formatting
 local on_attach = function(client, bufnr)
-	local bufopts = { noremap = true, silent = true, buffer = bufnr }
-	vim.keymap.set("n", "<space>f", function()
-		vim.lsp.buf.format({ async = true })
-	end, bufopts)
+	vim.lsp.buf.format({ async = true })
+  vim.keymap.set("n", "<leader>f", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", { noremap = true, silent = true })
 end
+
+
+
 
 -- LSP capabilities
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -33,12 +33,13 @@ local servers = {
 	"prosemd_lsp",
 	"dartls",
 	"pyright",
-  "bashls",
-  "awk_ls",
-  "yamlls",
-  "gopls",
-  "jsonls",
-
+	"bashls",
+	"awk_ls",
+	"yamlls",
+	"gopls",
+	"jsonls",
+	"docker_compose_language_service",
+	"dockerls",
 }
 
 -- setup each server

@@ -32,6 +32,7 @@ chrpath
 clang
 cmake
 cmus
+cockpit
 coreimage
 coreshot
 cowsay
@@ -51,12 +52,14 @@ diffstat
 difftastic
 discord
 dmenu
+dmidecode
 docker
 docker-compose
 dog
 dosfstools
 dotfiles
 dotnet-runtime
+dotnet-runtime-6.0
 dotnet-sdk
 duf
 dunst
@@ -117,6 +120,7 @@ lib32-fakeroot
 lib32-libltdl
 libiio
 libtool
+libvirt
 linux
 linux-firmware
 linux-headers
@@ -210,10 +214,9 @@ sshfs
 sshpass
 strace
 sudo
-surfshark-gui-bin
-surfshark-vpn
 swi-prolog
 sxhkd
+symlinks
 syslog-ng
 task
 tcpdump
@@ -251,9 +254,11 @@ unclutter
 unzip
 up
 usbutils
+vagrant
 valgrind
 vi
 vidir
+virtualbox
 visidata
 vlc
 vsftpd

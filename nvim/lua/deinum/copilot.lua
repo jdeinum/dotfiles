@@ -16,3 +16,7 @@ local function toggle_copilot()
 end
 
 vim.keymap.set("n", "<leader>k", toggle_copilot)
+
+vim.cmd [[
+  let g:copilot_filetypes = {'yaml': v:true}
+]]
