@@ -199,7 +199,6 @@ rofi
 ropper
 rpcsvc-proto
 rsync
-rust-analyzer
 rustup
 sbcl
 scons
