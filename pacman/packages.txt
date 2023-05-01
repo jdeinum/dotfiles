@@ -194,6 +194,7 @@ qemu-full
 r
 radare2
 rar
+reflector
 ripgrep
 rofi
 ropper
@@ -220,7 +221,6 @@ syslog-ng
 task
 tcpdump
 teams-for-linux
-teamviewer
 texinfo
 texlive-bibtexextra
 texlive-core
