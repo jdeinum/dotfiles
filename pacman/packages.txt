@@ -127,6 +127,7 @@ linux-headers
 llvm
 load-tester-bin
 lshw
+lua51-lpeg
 lynx
 lzop
 m4
