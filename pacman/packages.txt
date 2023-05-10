@@ -6,6 +6,7 @@ ansible
 apache
 arandr
 arduino-cli
+arm-none-linux-gnueabihf-toolchain-bin
 ascii
 ascii-image-converter
 asciiquarium
@@ -136,12 +137,14 @@ masterpdfeditor
 mawk
 mbuffer
 minicom
+modemmanager
 mosh
+msgpack-c
 mtools
 mtr
 ncurses5-compat-libs
 neofetch
-neovim-git
+neovim
 netcoredbg
 network-manager-applet
 networkmanager
@@ -253,6 +256,7 @@ uboot-tools
 unclutter
 unzip
 up
+usb_modeswitch
 usbutils
 vagrant
 valgrind
@@ -266,6 +270,8 @@ vtop
 wavemon
 wget
 which
+wireguard-dkms
+wireguard-go
 wireguard-tools
 wireless_tools
 wireshark-qt
