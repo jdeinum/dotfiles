@@ -176,6 +176,7 @@ pastel
 patch
 patchelf
 pavucontrol
+pdfarranger
 pdftk
 perf
 pgcli
