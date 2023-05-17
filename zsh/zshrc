@@ -198,6 +198,14 @@ gu () {
   git push;
 }
 
+wg_up () {
+  sudo wg-quick up opnsense
+}
+
+wg_down () {
+  sudo wg-quick down opnsense
+}
+
 # commit and push the ~/.dotfiles repo then updates the system
 up () {
   yay -Qqe > ~/.dotfiles/pacman/packages.txt
@@ -222,6 +230,11 @@ zstyle ':completion:*' list-colors
 eval "$(lua ~/.lua/zlua/z.lua --init zsh)"
 
 GOPATH="/home/deinum/Documents/go"
+
+
+# show tasks
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+task
 
 
 
