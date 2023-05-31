@@ -134,7 +134,7 @@ alias -g diff='difft'
 alias -g traceroute='mtr'
 alias -g locate='plocate'
 alias -g hexdump='hexyl'
-alias -g curl='xh'
+# alias -g curl='xh'
 alias -g find='fd'
 alias -g top='htop'
 alias -g df='duf'
@@ -206,11 +206,20 @@ wg_down () {
   sudo wg-quick down opnsense
 }
 
+wgu () {
+  wg_down
+  wg_up
+}
+
 # commit and push the ~/.dotfiles repo then updates the system
 up () {
   yay -Qqe > ~/.dotfiles/pacman/packages.txt
   git -C ~/.dotfiles add . && git -C ~/.dotfiles commit -q -m "$(date) | Auto Merged" && git -C ~/.dotfiles push -q;
   yay -Syu;
+}
+
+cts () {
+  ssh -p 50003 boat@192.168.0.5
 }
 
 

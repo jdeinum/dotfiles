@@ -92,6 +92,7 @@ gitui
 gnu-netcat
 gnuplot
 go
+google-chrome
 gparted
 gping
 grep
@@ -176,7 +177,6 @@ pastel
 patch
 patchelf
 pavucontrol
-pdfarranger
 pdftk
 perf
 pgcli
@@ -265,6 +265,7 @@ vi
 vidir
 virtualbox
 visidata
+visual-studio-code-bin
 vlc
 vsftpd
 vtop
