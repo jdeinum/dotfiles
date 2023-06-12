@@ -66,6 +66,7 @@ duf
 dunst
 efibootmgr
 elixir
+elixir-ls
 entr
 exa
 expac
@@ -183,6 +184,7 @@ pgcli
 pkgconf
 plocate
 podman-compose
+postgresql
 powerdevil
 procs
 prospect-mail-bin
@@ -260,6 +262,7 @@ up
 usb_modeswitch
 usbutils
 vagrant
+vagrant-vmware-utility
 valgrind
 vi
 vidir

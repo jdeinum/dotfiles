@@ -2,6 +2,7 @@ null_ls = require("null-ls")
 
 require("null-ls").setup({
 	sources = {
+		require("null-ls").builtins.formatting.eslint_d, -- JS linter
 		require("null-ls").builtins.formatting.stylua, -- JS linter
 		-- require("null-ls").builtins.formatting.yamlfmt,
 		-- require("null-ls").builtins.diagnostics.yamllint,
@@ -10,7 +11,12 @@ require("null-ls").setup({
 		-- require("null-ls").builtins.diagnostics.tidy, -- HTML / XML linter
 		require("null-ls").builtins.formatting.beautysh, -- Beautify shell scripts
 		require("null-ls").builtins.formatting.clang_format, -- Beautify clang
-		require("null-ls").builtins.formatting.black, -- Python linter
+    null_ls.builtins.diagnostics.credo,
+    null_ls.builtins.formatting.mix,
+		-- require("null-ls").builtins.formatting.black, -- Python linter
+		require("null-ls").builtins.formatting.black.with({
+			extra_args = { "--line-length=120" },
+		}),
 		-- require("null-ls").builtins.code_actions.gitsigns, -- Python linter
 	},
 	on_attach = function(client, bufnr)
