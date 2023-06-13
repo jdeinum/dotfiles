@@ -25,6 +25,7 @@ binutils
 bison
 bluez-utils
 brightnessctl
+btrfs-progs
 calibre
 caprine
 cgasm
@@ -47,6 +48,7 @@ czkawka-cli
 czkawka-gui-bin
 dcfldd
 ddgr
+dhclient
 dialog
 diff2html
 diffstat
@@ -131,6 +133,8 @@ llvm
 load-tester-bin
 lshw
 lua51-lpeg
+lxc
+lxd
 lynx
 lzop
 m4
