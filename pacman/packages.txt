@@ -170,6 +170,7 @@ ntp
 nvim-packer-git
 openjdk-doc
 openjdk-src
+openresolv
 openssh
 opus-tools
 ots
