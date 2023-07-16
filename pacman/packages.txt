@@ -168,6 +168,7 @@ ntfs-3g
 ntfy
 ntp
 nvim-packer-git
+okular
 openjdk-doc
 openjdk-src
 openresolv
@@ -186,6 +187,9 @@ pavucontrol
 pdftk
 perf
 pgcli
+pipewire
+pipewire-alsa
+pipewire-pulse
 pkgconf
 plocate
 podman-compose
@@ -195,7 +199,6 @@ procs
 prospect-mail-bin
 protobuf
 proximity-sort
-pulseaudio
 pulseaudio-control
 pulseaudio-ctl
 putty
@@ -234,18 +237,18 @@ task
 tcpdump
 teams-for-linux
 texinfo
+texlive-basic
 texlive-bibtexextra
-texlive-core
 texlive-fontsextra
 texlive-formatsextra
 texlive-games
 texlive-humanities
 texlive-latexextra
+texlive-mathscience
 texlive-music
 texlive-pictures
 texlive-pstricks
 texlive-publishers
-texlive-science
 tidy
 timew
 tk
@@ -284,6 +287,7 @@ wireguard-dkms
 wireguard-go
 wireguard-tools
 wireless_tools
+wireplumber
 wireshark-qt
 woeusb
 xclip
