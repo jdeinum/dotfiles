@@ -44,8 +44,6 @@ cronie
 ctop
 cups
 cups-pdf
-czkawka-cli
-czkawka-gui-bin
 dcfldd
 ddgr
 dhclient
