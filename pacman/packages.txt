@@ -136,6 +136,7 @@ lxd
 lynx
 lzop
 m4
+macchanger
 make
 masterpdfeditor
 mawk
