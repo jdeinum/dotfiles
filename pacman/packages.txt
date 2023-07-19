@@ -1,4 +1,5 @@
 1password
+aircrack-ng
 alacritty
 alacritty-themes
 alsa-utils
@@ -141,6 +142,7 @@ make
 masterpdfeditor
 mawk
 mbuffer
+metasploit
 minicom
 modemmanager
 mosh
