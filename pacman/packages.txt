@@ -87,6 +87,7 @@ gawk
 gcc
 gdb
 gettext
+ghz
 gimp
 git
 git-extensions
@@ -203,6 +204,7 @@ proximity-sort
 pulseaudio-control
 pulseaudio-ctl
 putty
+pv
 pwndbg-git
 python-pip
 qbittorrent
@@ -228,6 +230,7 @@ speedtest-cli
 spotify
 sshfs
 sshpass
+steam
 strace
 sudo
 swi-prolog
