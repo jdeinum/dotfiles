@@ -36,6 +36,7 @@ clang
 cmake
 cmus
 cockpit
+composer
 coreimage
 coreshot
 cowsay
