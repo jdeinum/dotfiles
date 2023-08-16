@@ -121,7 +121,6 @@ jupyterlab
 kmix
 kwalletmanager
 laptop-mode-tools
-lazydocker
 lib32-fakeroot
 lib32-libltdl
 libiio
