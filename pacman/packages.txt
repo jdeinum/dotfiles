@@ -135,6 +135,7 @@ lshw
 lua51-lpeg
 lxc
 lxd
+lynis
 lynx
 lzop
 m4
@@ -228,6 +229,7 @@ slack-desktop
 socat
 speedtest-cli
 spotify
+ssh-audit
 sshfs
 sshpass
 steam
@@ -237,6 +239,7 @@ swi-prolog
 sxhkd
 symlinks
 syslog-ng
+tailscale
 task
 tcpdump
 teams-for-linux
