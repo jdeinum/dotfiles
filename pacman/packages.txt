@@ -99,6 +99,7 @@ go
 google-chrome
 gparted
 gping
+grc
 grep
 groff
 grub
@@ -215,6 +216,7 @@ radare2
 rar
 reflector
 ripgrep
+rkhunter
 rofi
 ropper
 rpcsvc-proto
