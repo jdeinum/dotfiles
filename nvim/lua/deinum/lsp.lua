@@ -43,6 +43,7 @@ local servers = {
 	"docker_compose_language_service",
 	"dockerls",
 	"tsserver",
+  "sqlls"
 }
 
 -- setup each server
