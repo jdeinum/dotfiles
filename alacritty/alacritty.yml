@@ -95,41 +95,26 @@ scrolling:
 
 # Font configuration
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family: "monospace"
-    # The `style` can be specified to pick a specific face.
-    #style: Regular
-    # Bold font face
-    #bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-    # The `style` can be specified to pick a specific face.
-    #style: Bold
-    # Italic font face
-    #italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    #family: monospace
-    # The `style` can be specified to pick a specific face.
-    #style: Italic
-    # Bold italic font face
-    #bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value spec
+    family: terminal-font
+    style: Regular
+
+  bold:
+    family: terminal-font
+    style: Bold
+
+  italic:
+    family: terminal-font
+    style: Italic
+
+  bold_italic:
+    family: terminal-font
+    style: Bold Italic
+
+  size: 10.5
+  offset:
+    x: 2
+    y: 1
 colors:
   # Default colors
   primary:
