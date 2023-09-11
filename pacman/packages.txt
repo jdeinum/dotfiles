@@ -71,8 +71,8 @@ efibootmgr
 elixir
 elixir-ls
 entr
-exa
 expac
+eza
 fakeroot
 fd
 feh
@@ -125,6 +125,7 @@ kwalletmanager
 laptop-mode-tools
 lib32-fakeroot
 lib32-libltdl
+libayatana-appindicator
 libiio
 libtool
 libvirt
