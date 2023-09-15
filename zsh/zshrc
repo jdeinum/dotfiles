@@ -124,10 +124,10 @@ alias nf='n $(fzf)'
 
 alias -g p='yay'
 alias -g p='yay'
-alias -g l='exa'
-alias -g ls='exa'
-alias -g ll='exa -l'
-alias -g lll='exa -la'
+alias -g l='eza'
+alias -g ls='eza'
+alias -g ll='eza -l'
+alias -g lll='eza -la'
 alias -g cat='bat'
 alias -g dig='dog'
 alias -g diff='difft'
@@ -221,6 +221,17 @@ up () {
 cts () {
   ssh -p 50003 boat@192.168.0.5
 }
+
+tu () {
+  wg_down || true
+  sudo tailscale up;
+}
+
+ts () {
+  tailscale status
+}
+
+
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
