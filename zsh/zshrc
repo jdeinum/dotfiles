@@ -140,6 +140,7 @@ alias -g top='htop'
 alias -g df='duf'
 alias -g ping="gping"
 alias -g psu="procs --pager disable $(whoami)"
+alias -g t="tailscale"
 
 # ntfy -> send particular notification 
 # speedtest-cli -> internet speed test
@@ -230,6 +231,8 @@ tu () {
 ts () {
   tailscale status
 }
+
+
 
 
 
