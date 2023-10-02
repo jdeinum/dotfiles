@@ -109,6 +109,7 @@ gzip
 hdparm
 hexyl
 hopper4
+hostapd
 htop
 httpie
 hyperfine
@@ -221,6 +222,8 @@ putty
 pv
 pwndbg-git
 python-pip
+python-requests-html
+python-selenium
 qbittorrent
 qemu-full
 r
