@@ -22,6 +22,7 @@ base
 bat
 beautysh
 beep
+bind
 binutils
 bison
 bluez-utils
@@ -179,7 +180,6 @@ nvim-packer-git
 okular
 openjdk-doc
 openjdk-src
-openresolv
 openssh
 opus-tools
 otf-aurulent-nerd
@@ -256,6 +256,7 @@ swi-prolog
 sxhkd
 symlinks
 syslog-ng
+systemd-resolvconf
 tailscale
 task
 tcpdump
