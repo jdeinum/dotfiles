@@ -243,6 +243,7 @@ screen
 seahorse
 sed
 slack-desktop
+smartmontools
 socat
 speedtest-cli
 spotify
