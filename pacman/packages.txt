@@ -343,7 +343,6 @@ up
 usb_modeswitch
 usbutils
 vagrant
-vagrant-vmware-utility
 valgrind
 vi
 vidir
